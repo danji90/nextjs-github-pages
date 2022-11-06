@@ -2,6 +2,7 @@
   "name": "nextjs-github-pages",
   "version": "0.1.0",
   "private": true,
+  "author": "Daniel Marsh-Hunn",
   "scripts": {
     "dev": "next dev",
     "export": "next export",

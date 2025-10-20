@@ -1,4 +1,4 @@
-import BookList from "./components/BookList";
+import BookList from "@/app/components/BookList";
 
 export default function Home() {
   return (

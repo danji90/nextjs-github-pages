@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
+import Spinner from "@/app/components/Spinner";
 import { tryCatch } from "@/app/lib/tryCatch";
-import Spinner from "../Spinner";
 
 export interface Book {
   id: number;
@@ -32,9 +32,7 @@ function useBooks() {
   const fetchBooks = async () => {
     setLoading(true);
     const [response, err] = await tryCatch(
-      fetch(
-        "https://www.fakerapi.it/api/v2/books?_quantity=20&_locale=en-gb",
-      ).then((res) => {
+      fetch("https://www.fakerapi.it/api/v2/books?_quantity=20").then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
